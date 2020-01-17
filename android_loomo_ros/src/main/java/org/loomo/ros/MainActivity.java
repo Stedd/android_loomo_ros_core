@@ -108,7 +108,7 @@ public class MainActivity extends RosActivity implements CompoundButton.OnChecke
     // If you'd like to be able to select the URI in the app on startup, replace
     // super( , , ) with super( , ) to start a different version of RosActivity
     //public MainActivity() { super("LoomoROS", "LoomoROS");}
-    public MainActivity() { super("LoomoROS", "LoomoROS", URI.create("http://192.168.42.36:11311/")); }
+    public MainActivity() { super("LoomoROS", "LoomoROS", URI.create("http://192.168.2.31:11311/")); }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override

@@ -37,6 +37,8 @@ public class LocomotionSubscriber implements LoomoRosBridgeConsumer {
     public void loomo_started(Base mBase)
     {
         this.mBase = mBase;
+//        TODO: Where it the service for the base?
+//        this.mBase.bindService()
 
         // Configure Base to accept raw linear/angular velocity commands
         this.mBase.setControlMode(Base.CONTROL_MODE_RAW);
@@ -54,6 +56,7 @@ public class LocomotionSubscriber implements LoomoRosBridgeConsumer {
         mStarted = true;
 
         mBridgeNode.mCmdVelSubr.addMessageListener(cmdVelListener);
+        Log.d(TAG, "Velocity command listener started");
     }
 
     @Override

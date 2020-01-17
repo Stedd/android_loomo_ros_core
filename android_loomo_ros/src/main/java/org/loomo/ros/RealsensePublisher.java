@@ -375,7 +375,9 @@ public class RealsensePublisher implements LoomoRosBridgeConsumer, IMUDataCallba
         @Override
         public void onNewFrame(int streamType, Frame frame) {
             if (!mIsPubRsColor) {
-                Log.d(TAG, "mRsColorListener: !mIsPubRsColor");
+//                TODO: this throws a lot of messages, why?
+//                Log.d(TAG, "mRsColorListener: !mIsPubRsColor");
+
                 return;
             }
             if (streamType != StreamType.COLOR) {

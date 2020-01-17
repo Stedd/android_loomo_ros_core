@@ -82,7 +82,6 @@ public class SensorPublisher implements LoomoRosBridgeConsumer {
             super.run();
 
             while (null != mSensor) {
-
                 // No metadata for this frame yet
                 // Get an appropriate ROS time to match the platform time of this stamp
                 Time currentRosTime = mBridgeNode.mConnectedNode.getCurrentTime();
@@ -90,6 +89,7 @@ public class SensorPublisher implements LoomoRosBridgeConsumer {
                 Duration rosToSystemTimeOffset = currentRosTime.subtract(currentSystemTime);
 
                 if (mBridgeNode.should_pub_ultrasonic){
+//                    TODO: Her hentes ultralyd sensor data gjennom Loomo API
                     SensorData mUltrasonicData = mSensor.querySensorData(Arrays.asList(Sensor.ULTRASONIC_BODY)).get(0);
                     float mUltrasonicDistance = mUltrasonicData.getIntData()[0];
                     Range ultrasonicMessage = mBridgeNode.mUltrasonicPubr.newMessage();

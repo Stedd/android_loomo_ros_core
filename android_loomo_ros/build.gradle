@@ -46,10 +46,19 @@ dependencies {
     implementation 'org.ros.rosjava_messages:nav_msgs'
     implementation 'org.ros.rosjava_messages:tf2_msgs'
     implementation 'org.ros.rosjava_messages:std_msgs'
-    implementation 'com.segway.robot:visionsdk:0.6.547'
-    implementation 'com.segway.robot:headsdk:0.6.746'
-    implementation 'com.segway.robot:basesdk:0.6.746'
-    implementation 'com.segway.robot:sensorsdk:0.6.746'
+
+//    Loomo dependencies
+
+//    VISION
+    implementation 'com.segway.robot:visionsdk:0.6.874'
+//    HEAD
+    implementation 'com.segway.robot:headsdk:0.6.999'
+//    BASE
+    implementation 'com.segway.robot:basesdk:0.6.999'
+//    SENSORS
+    implementation 'com.segway.robot:sensorsdk:0.6.999'
+
+
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     //implementation 'com.segway.robot:speech-sdk:0.5.327'
     //implementation 'com.segway.robot:robot-connectivity-sdk:0.5.104'
